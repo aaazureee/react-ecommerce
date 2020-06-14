@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 
 import './menu-item.styles.scss';
 
@@ -6,15 +7,24 @@ type MenuItemProps = {
   title: string;
   imageUrl: string;
   size?: string;
-} & typeof MenuItemDefaultProps;
+  subtitle?: string;
+  linkUrl: string;
+} & RouteComponentProps;
 
-const MenuItemDefaultProps = {
-  subtitle: 'SHOP NOW',
-};
-
-const MenuItem = ({ title, subtitle, imageUrl, size }: MenuItemProps) => {
+const MenuItem = ({
+  title,
+  subtitle = 'SHOP NOW',
+  imageUrl,
+  size,
+  linkUrl,
+  history,
+  match,
+}: MenuItemProps) => {
   return (
-    <div className={`menu-item ${size ? size : ''}`}>
+    <div
+      className={`menu-item ${size ? size : ''}`}
+      onClick={() => history.push(`${match.url}${linkUrl}`)}
+    >
       <div
         className="background-image"
         style={{
@@ -29,6 +39,4 @@ const MenuItem = ({ title, subtitle, imageUrl, size }: MenuItemProps) => {
   );
 };
 
-MenuItem.defaultProps = MenuItemDefaultProps;
-
-export default MenuItem;
+export default withRouter(MenuItem);
