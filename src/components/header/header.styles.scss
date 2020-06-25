@@ -1,0 +1,41 @@
+@keyframes spin {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+.header {
+  height: 70px;
+  display: flex;
+  // justify-content: space-between;
+  margin-bottom: 25px;
+
+  .logo-container {
+    height: 100%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      width: 50px;
+      height: auto;
+      animation: spin 2s linear infinite;
+      animation-direction: alternate;
+    }
+  }
+
+  .options {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-size: 18px;
+
+    .option {
+      padding: 10px 15px;
+      margin-top: 1.5px;
+    }
+  }
+}

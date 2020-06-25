@@ -3,8 +3,16 @@ import MenuItem from '../menu-item/menu-item.component';
 
 import './directory.styles.scss';
 
+type Section = {
+  title: string;
+  imageUrl: string;
+  size?: string;
+  id: number;
+  linkUrl: string;
+};
+
 const Directory = () => {
-  const [sections, _setSections] = useState([
+  const [sections, _setSections] = useState<Section[]>([
     {
       title: 'hats',
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
