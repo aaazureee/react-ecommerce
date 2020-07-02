@@ -36,6 +36,10 @@
     .option {
       padding: 10px 15px;
       margin-top: 1.5px;
+
+      &.sign-out {
+        cursor: pointer;
+      }
     }
   }
 }

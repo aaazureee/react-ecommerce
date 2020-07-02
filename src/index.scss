@@ -19,3 +19,9 @@ a {
   color: black;
   text-decoration: none;
 }
+
+button {
+  &:focus {
+    outline: none;
+  }
+}

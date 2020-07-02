@@ -1,6 +1,10 @@
 import { useState } from 'react';
 
-const useForm = <T extends Record<string, unknown>>(initialState: T) => {
+interface GenericObject {
+  [key: string]: any;
+}
+
+const useForm = <T extends GenericObject>(initialState: T) => {
   const [formState, setFormState] = useState(initialState);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

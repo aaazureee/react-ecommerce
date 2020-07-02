@@ -8,13 +8,28 @@
   color: white;
   text-transform: uppercase;
   font-family: 'Open Sans Condensed';
-  font-weight: bold;
+  font-weight: bolder;
   border: none;
   cursor: pointer;
 
-  &:hover {
+  &:hover:enabled {
     background-color: white;
     color: black;
-    border: 1px solid black;
+    border: 0.5px solid black;
+  }
+
+  &.google-sign-in {
+    background-color: #4285f4;
+    color: white;
+
+    &:hover {
+      background-color: rgb(53, 122, 232);
+      border: none;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
