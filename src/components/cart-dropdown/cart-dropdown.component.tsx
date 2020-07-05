@@ -3,12 +3,16 @@ import './cart-dropdown.styles.scss';
 import CustomButton from '../custom-button/custom-button.component';
 import { connect } from 'react-redux';
 import { toggleCartVisibility } from '../../store/cart/actions';
+import { RootState } from '../../store';
+import { CollectionItemData } from '../../pages/shop/shop.component';
+import CartItem from '../cart-item/cart-item.component';
 
 interface CartDropDownProps {
+  cartItems: CollectionItemData[];
   dispatch: any;
 }
 
-const CartDropdown = ({ dispatch }: CartDropDownProps) => {
+const CartDropdown = ({ cartItems, dispatch }: CartDropDownProps) => {
   return (
     <div className="cart-dropdown">
       <button
@@ -20,25 +24,17 @@ const CartDropdown = ({ dispatch }: CartDropDownProps) => {
         &times;
       </button>
       <div className="cart-items">
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
-        <div>h1</div>
+        {cartItems.map((cartItem) => (
+          <CartItem key={cartItem.id} item={cartItem} />
+        ))}
       </div>
       <CustomButton>CHECKOUT</CustomButton>
     </div>
   );
 };
 
-export default connect()(CartDropdown);
+const mapStateToProps = ({ cart: { cartItems } }: RootState) => ({
+  cartItems,
+});
+
+export default connect(mapStateToProps)(CartDropdown);

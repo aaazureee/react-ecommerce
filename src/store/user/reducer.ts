@@ -12,7 +12,7 @@ import {
 } from './types';
 
 const initialState: UserReducerState = {
-  currentUser: JSON.parse(localStorage.getItem('user') as string),
+  currentUser: null,
   isLoadingGoogle: false,
   isLoadingNormal: false,
   error: '',

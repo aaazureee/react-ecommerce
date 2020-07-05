@@ -30,7 +30,7 @@ const CollectionItem = ({ item, dispatch }: CollectionItemProps) => {
 
       <div className="collection-footer">
         <span className="name">{name}</span>
-        <span className="price">{price}</span>
+        <span className="price">${price}</span>
       </div>
 
       <CustomButton inverted onClick={() => dispatch(addCartItem(item))}>
