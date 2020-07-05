@@ -3,14 +3,17 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { RootState } from '../../store';
 import { signOutFirebase } from '../../store/user/thunks';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import CartIcon from '../cart-icon/cart-icon.component';
 import './header.styles.scss';
 
 interface HeaderProps {
   userDisplayName: string;
+  cartHidden: boolean;
   dispatch: any;
 }
 
-const Header = ({ userDisplayName, dispatch }: HeaderProps) => {
+const Header = ({ userDisplayName, cartHidden, dispatch }: HeaderProps) => {
   const signOut = async () => {
     dispatch(signOutFirebase());
   };
@@ -50,13 +53,19 @@ const Header = ({ userDisplayName, dispatch }: HeaderProps) => {
             SIGN IN
           </Link>
         )}
+        <CartIcon />
       </div>
+      {!cartHidden && <CartDropdown />}
     </div>
   );
 };
 
-const mapStateToProps = ({ user: { currentUser } }: RootState) => ({
+const mapStateToProps = ({
+  user: { currentUser },
+  cart: { hidden },
+}: RootState) => ({
   userDisplayName: currentUser?.displayName as string,
+  cartHidden: hidden,
 });
 
 export default connect(mapStateToProps)(Header);

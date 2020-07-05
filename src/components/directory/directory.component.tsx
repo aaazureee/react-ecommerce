@@ -12,7 +12,7 @@ type Section = {
 };
 
 const Directory = () => {
-  const [sections, _setSections] = useState<Section[]>([
+  const [sections] = useState<Section[]>([
     {
       title: 'hats',
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',

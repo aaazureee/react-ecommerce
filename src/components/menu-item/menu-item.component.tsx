@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 
 import './menu-item.styles.scss';
@@ -20,17 +20,22 @@ const MenuItem = ({
   history,
   match,
 }: MenuItemProps) => {
+  const [loading, setLoading] = useState(true);
   return (
     <div
-      className={`menu-item ${size ? size : ''}`}
+      className={`menu-item ${size ? size : ''} ${loading ? 'no-border' : ''}`}
       onClick={() => history.push(`${match.url}${linkUrl}`)}
     >
-      <div
+      {loading && <div className="placeholder-image gradient" />}
+      <img
+        src={imageUrl}
+        alt="menu-item"
         className="background-image"
         style={{
-          backgroundImage: `url(${imageUrl})`,
+          display: loading ? 'none' : 'block',
         }}
-      ></div>
+        onLoad={() => setLoading(false)}
+      />
       <div className="content">
         <div className="title">{title.toUpperCase()}</div>
         <span className="subtitle">{subtitle}</span>

@@ -39,10 +39,6 @@ export const authListener = (
         dispatch(signInSuccess(finalUser));
       });
     }
-    // else {
-    //   // signing out
-    //   dispatch(signOut());
-    // }
   });
   setUnsubscribe(unsubscribe);
 };

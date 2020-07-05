@@ -16,10 +16,11 @@ export type CollectionItemData = {
   name: string;
   imageUrl: string;
   price: number;
+  quantity?: number;
 };
 
 const ShopPage = () => {
-  const [collections, setCollections] = useState<CollectionData[]>(SHOP_DATA);
+  const [collections] = useState<CollectionData[]>(SHOP_DATA);
 
   return (
     <div className="shop-page">
