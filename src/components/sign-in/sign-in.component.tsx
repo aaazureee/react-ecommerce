@@ -1,12 +1,22 @@
-import React, { useEffect, useContext, useState } from 'react';
-import './sign-in.styles.scss';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { signInWithGoogle } from '../../firebase/firebase.utils';
 import useForm from '../../hooks/useForm';
-import FormInput from '../form-input/form-input.component';
+import { RootState } from '../../store';
+import { signInNormal, handleGoogleRedirect } from '../../store/user/thunks';
 import CustomButton from '../custom-button/custom-button.component';
+import FormInput from '../form-input/form-input.component';
+import './sign-in.styles.scss';
+import { useHistory } from 'react-router-dom';
+import { UserType } from '../../store/user/types';
 
-import { signInWithGoogle, auth } from '../../firebase/firebase.utils';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
-import UserContext from '../../contexts/UserContext';
+interface SignInProps {
+  error: string;
+  isLoadingNormal: boolean;
+  isLoadingGoogle: boolean;
+  currentUser: UserType | null;
+  dispatch: any;
+}
 
 type SignInState = {
   email: string;
@@ -18,43 +28,38 @@ const initialState: SignInState = {
   password: '',
 };
 
-const SignIn = ({ history }: RouteComponentProps) => {
-  const [formState, handleChange, reset] = useForm<SignInState>(initialState);
+const SignIn = ({
+  error,
+  isLoadingGoogle,
+  isLoadingNormal,
+  dispatch,
+  currentUser,
+}: SignInProps) => {
+  const [formState, handleChange] = useForm<SignInState>(initialState);
   const { email, password } = formState;
-  const [isLoading, setLoading] = useState(false);
-  const { user, setUser } = useContext(UserContext);
+  const history = useHistory();
 
   useEffect(() => {
-    console.log('its ran');
-    setLoading(true);
-    if (user) {
-      return history.push('/');
-    }
-    auth
-      .getRedirectResult()
-      .then(function (result) {
-        if (result.user) {
-          // optimistic
-          setUser({
-            displayName: result.user.displayName as string,
-          });
-          return history.push('/');
-        }
-        setLoading(false);
-      })
-      .catch((error) => {
-        setLoading(false);
-        console.log(error);
-      });
-  }, [history, user, setUser]);
+    dispatch(handleGoogleRedirect(history));
+  }, [dispatch, history, currentUser]);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    reset();
-    history.push('/');
+    const { email, password } = formState;
+    dispatch(signInNormal(email, password));
   };
 
-  if (isLoading) return <h3>Signing you in...</h3>;
+  if (isLoadingGoogle)
+    return (
+      <h3
+        style={{
+          flex: 1,
+          alignSelf: 'center',
+        }}
+      >
+        Signing you in...
+      </h3>
+    );
 
   return (
     <div className="sign-in">
@@ -80,10 +85,15 @@ const SignIn = ({ history }: RouteComponentProps) => {
           onChange={handleChange}
           label="Password"
           required
+          style={{
+            marginBottom: 20,
+          }}
         />
-
+        {error && <div className="error">{error}</div>}
         <div className="buttons">
-          <CustomButton type="submit">Sign in</CustomButton>
+          <CustomButton type="submit" disabled={isLoadingNormal}>
+            Sign in
+          </CustomButton>
           <CustomButton
             type="button"
             isGoogleSignIn
@@ -99,4 +109,13 @@ const SignIn = ({ history }: RouteComponentProps) => {
   );
 };
 
-export default withRouter(SignIn);
+const mapStateToProps = ({
+  user: { error, isLoadingNormal, isLoadingGoogle, currentUser },
+}: RootState) => ({
+  error,
+  isLoadingNormal,
+  isLoadingGoogle,
+  currentUser,
+});
+
+export default connect(mapStateToProps)(SignIn);

@@ -1,6 +1,7 @@
 import firebase, { User } from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
+import { setRedirectedFromGoogle } from '../shared/util';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAFaMJBrThj5t05HssB24JYTuPw1oPGbuk',
@@ -23,7 +24,10 @@ provider.setCustomParameters({
   prompt: 'select_account',
 });
 
-export const signInWithGoogle = () => auth.signInWithRedirect(provider);
+export const signInWithGoogle = () => {
+  setRedirectedFromGoogle();
+  auth.signInWithRedirect(provider);
+};
 
 export const createUserProfile = async (user: User, additionalData?: any) => {
   if (!user) return;

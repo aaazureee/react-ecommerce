@@ -1,15 +1,18 @@
-import React, { useContext } from 'react';
-
-import './header.styles.scss';
+import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import UserContext from '../../contexts/UserContext';
-import { auth } from '../../firebase/firebase.utils';
+import { RootState } from '../../store';
+import { signOutFirebase } from '../../store/user/thunks';
+import './header.styles.scss';
 
-const Header = () => {
-  const { user } = useContext(UserContext);
+interface HeaderProps {
+  userDisplayName: string;
+  dispatch: any;
+}
 
+const Header = ({ userDisplayName, dispatch }: HeaderProps) => {
   const signOut = async () => {
-    await auth.signOut();
+    dispatch(signOutFirebase());
   };
 
   return (
@@ -35,9 +38,9 @@ const Header = () => {
         <Link className="option" to="/shop">
           SHOP
         </Link>
-        {user ? (
+        {userDisplayName ? (
           <>
-            <div className="option">{user.displayName}</div>
+            <div className="option">{userDisplayName}</div>
             <div className="option sign-out" onClick={signOut}>
               SIGN OUT
             </div>
@@ -52,4 +55,8 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = ({ user: { currentUser } }: RootState) => ({
+  userDisplayName: currentUser?.displayName as string,
+});
+
+export default connect(mapStateToProps)(Header);

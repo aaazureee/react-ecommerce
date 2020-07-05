@@ -1,11 +1,18 @@
-import { User } from 'firebase';
-import React, { useState } from 'react';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { auth, createUserProfile } from '../../firebase/firebase.utils';
+import React from 'react';
+import { connect } from 'react-redux';
 import useForm from '../../hooks/useForm';
+import { RootState } from '../../store';
+import { signUpError } from '../../store/user/actions';
+import { signUp } from '../../store/user/thunks';
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 import './sign-up.styles.scss';
+
+interface SignUpProps {
+  dispatch: any;
+  isSigningUp: boolean;
+  signUpErrorMsg: string;
+}
 
 interface SignUpState {
   displayName: string;
@@ -21,34 +28,20 @@ const initialState: SignUpState = {
   confirmPassword: '',
 };
 
-const SignUp = ({ history }: RouteComponentProps) => {
+const SignUp = ({ dispatch, isSigningUp, signUpErrorMsg }: SignUpProps) => {
   const [formState, handleChange] = useForm<SignUpState>(initialState);
   const { displayName, email, password, confirmPassword } = formState;
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError('');
 
     const { displayName, email, password, confirmPassword } = formState;
 
     if (password !== confirmPassword) {
-      return setError('Please confirm your password :)');
+      return dispatch(signUpError('Please confirm your password :)'));
     }
 
-    try {
-      setLoading(true);
-      const { user } = await auth.createUserWithEmailAndPassword(
-        email,
-        password
-      );
-      await createUserProfile(user as User, { displayName });
-      history.push('/');
-    } catch (err) {
-      setLoading(false);
-      setError(err.message);
-    }
+    dispatch(signUp(email, password, displayName));
   };
 
   return (
@@ -95,8 +88,8 @@ const SignUp = ({ history }: RouteComponentProps) => {
             marginBottom: 20,
           }}
         />
-        {error && <div className="error">{error}</div>}
-        <CustomButton type="submit" disabled={loading}>
+        {signUpErrorMsg && <div className="error">{signUpErrorMsg}</div>}
+        <CustomButton type="submit" disabled={isSigningUp}>
           Sign up
         </CustomButton>
       </form>
@@ -104,4 +97,11 @@ const SignUp = ({ history }: RouteComponentProps) => {
   );
 };
 
-export default withRouter(SignUp);
+const mapStateToProps = ({
+  user: { isSigningUp, signUpError },
+}: RootState) => ({
+  signUpErrorMsg: signUpError,
+  isSigningUp,
+});
+
+export default connect(mapStateToProps)(SignUp);
