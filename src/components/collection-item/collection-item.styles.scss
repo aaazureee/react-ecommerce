@@ -2,21 +2,29 @@
   width: 24%;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 450px;
   align-items: center;
   position: relative;
 
-  .image {
+  .image-holder {
     width: 100%;
-    height: 95%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+  }
+
+  .image {
+    position: relative;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    overflow: hidden;
     object-position: center;
-    margin-bottom: 5px;
   }
 
   .placeholder-image {
     width: 100%;
-    height: 95%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     margin-bottom: 5px;
   }
@@ -27,16 +35,14 @@
     justify-content: space-between;
     font-size: 18px;
 
-    .name {
-      margin-bottom: 15px;
-    }
+    margin-top: 5px;
   }
 
   .custom-button.inverted {
     width: 80%;
     opacity: 0.7;
     position: absolute;
-    top: 255px;
+    top: 325px;
     display: none;
   }
 

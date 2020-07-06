@@ -18,15 +18,17 @@ const CollectionItem = ({ item, dispatch }: CollectionItemProps) => {
   return (
     <div className="collection-item">
       {loading && <div className="placeholder-image gradient" />}
-      <img
-        className="image"
-        src={imageUrl}
-        alt="collection-item"
-        onLoad={() => setLoading(false)}
-        style={{
-          display: loading ? 'none' : 'block',
-        }}
-      />
+      <div className="image-holder">
+        <img
+          className="image"
+          src={imageUrl}
+          alt="collection-item"
+          onLoad={() => setLoading(false)}
+          style={{
+            display: loading ? 'none' : 'block',
+          }}
+        />
+      </div>
 
       <div className="collection-footer">
         <span className="name">{name}</span>
