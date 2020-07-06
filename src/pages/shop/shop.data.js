@@ -1,32 +1,44 @@
 const SHOP_DATA = [
   {
     id: 1,
-    title: 'Hats',
-    routeName: 'hats',
+    title: 'TㅡShirts',
+    routeName: 'tshirts',
     items: [
       {
         id: 1,
-        name: 'Brown Brim',
-        imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
-        price: 25,
+        name: '20SS Side Slit Contrast Pique T-Shirt - Beige',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/04/01/GM0020040109932_0_ORGINL_20200403174610662.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/04/01/GM0020040109932_2_ORGINL_20200403174610662.jpg',
+        price: 23.4,
       },
       {
         id: 2,
-        name: 'Blue Beanie',
-        imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
-        price: 18,
+        name: '20SS Colorblock Rugby T-Shirt - Black',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/13/GM0020021363661_0_ORGINL_20200220164802582.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/13/GM0020021363661_2_ORGINL_20200220164802582.jpg',
+        price: 33.58,
       },
       {
         id: 3,
-        name: 'Brown Cowboy',
-        imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
-        price: 35,
+        name: '20SS Pocket Piping Short Sleeve T-Shirt - Navy',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/03/30/GM0020033008203_0_ORGINL_20200410154452028.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/03/30/GM0020033008203_2_ORGINL_20200410154452028.jpg',
+        price: 21.8,
       },
       {
         id: 4,
-        name: 'Grey Brim',
-        imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
-        price: 25,
+        name: '20SS Slub Lettering Embroidery T-Shirt - White',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/04/27/GM0020042739772_0_ORGINL_20200508170159720.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/04/27/GM0020042739772_2_ORGINL_20200508170159720.jpg',
+        price: 25.16,
       },
       {
         id: 5,
@@ -62,32 +74,44 @@ const SHOP_DATA = [
   },
   {
     id: 2,
-    title: 'Sneakers',
-    routeName: 'sneakers',
+    title: 'Shirts',
+    routeName: 'shirts',
     items: [
       {
         id: 10,
-        name: 'Adidas NMD',
-        imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
-        price: 220,
+        name: '20SS Basic Linen Blended Collar Shirt - Ivory',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/27/GM0019122721904_0_ORGINL_20200320113153175.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/27/GM0019122721904_2_ORGINL_20200320113153175.jpg',
+        price: 33.58,
       },
       {
         id: 11,
-        name: 'Adidas Yeezy',
-        imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
-        price: 280,
+        name: '20SS Pocket Henry Neck Shirt - Grey',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/10/GM0020021059775_0_ORGINL_20200213175727840.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/10/GM0020021059775_2_ORGINL_20200213175727840.jpg',
+        price: 30.21,
       },
       {
         id: 12,
-        name: 'Black Converse',
-        imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
-        price: 110,
+        name: '20SS Stripe Open Collar Shirt - Black',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/04/24/GM0020042438417_0_ORGINL_20200508164047161.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/04/24/GM0020042438417_2_ORGINL_20200508164047161.jpg',
+        price: 50.42,
       },
       {
         id: 13,
-        name: 'Nike White AirForce',
-        imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
-        price: 160,
+        name: '20SS Patch Jacquard indigo Dyed Shirt - Blue',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/03/GM0020020352746_2_ORGINL_20200323104009151.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/03/GM0020020352746_0_ORGINL_20200323104009151.jpg',
+        price: 42,
       },
       {
         id: 14,
@@ -117,32 +141,44 @@ const SHOP_DATA = [
   },
   {
     id: 3,
-    title: 'Jackets',
-    routeName: 'jackets',
+    title: 'Pants / Trousers',
+    routeName: 'pants-trousers',
     items: [
       {
         id: 18,
-        name: 'Black Jean Shearling',
-        imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
-        price: 125,
+        name: '20SS Textured Fatigue Pants - Ivory',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/06/GM0019120608361_0_ORGINL_20200213171506371.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/06/GM0019120608361_2_ORGINL_20200213171506371.jpg',
+        price: 42,
       },
       {
         id: 19,
-        name: 'Blue Jean Jacket',
-        imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
-        price: 90,
+        name: '20SS Double Pleated Baggy Fit Denim Pants - Sky Blue',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/04/20/GM0020042034034_0_ORGINL_20200422133135195.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/04/20/GM0020042034034_2_ORGINL_20200422133135195.jpg',
+        price: 42,
       },
       {
         id: 20,
-        name: 'Grey Jean Jacket',
-        imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
-        price: 90,
+        name: '20SS Roll Up Slim Dress Pants - Ash',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/09/GM0019120909165_2_ORGINL_20200313133014837.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/09/GM0019120909165_3_ORGINL_20200313133014837.jpg',
+        price: 20.12,
       },
       {
         id: 21,
-        name: 'Brown Shearling',
-        imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
-        price: 165,
+        name: '20SS Raw Hem Wide Crop Banded Denim Pants - Ivory',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/04/03/GM0020040312599_0_ORGINL_20200410144238127.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/04/03/GM0020040312599_2_ORGINL_20200410144238127.jpg',
+        price: 26.86,
       },
       {
         id: 22,
@@ -154,32 +190,44 @@ const SHOP_DATA = [
   },
   {
     id: 4,
-    title: 'Womens',
-    routeName: 'womens',
+    title: 'Jackets/Vests',
+    routeName: 'jackets-vests',
     items: [
       {
         id: 23,
-        name: 'Blue Tanktop',
-        imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
-        price: 25,
+        name: '20SS Seersucker Set Up Jacket - Light Grey',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/03/17/GM0020031797588_0_ORGINL_20200320115027245.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/03/17/GM0020031797588_2_ORGINL_20200320115027245.jpg',
+        price: 67.25,
       },
       {
         id: 24,
-        name: 'Floral Blouse',
-        imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
-        price: 20,
+        name: '20SS Oversized Jacket - Ash',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/10/GM0020021059762_0_ORGINL_20200303105503888.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/10/GM0020021059762_3_ORGINL_20200303105503888.jpg',
+        price: 40.33,
       },
       {
         id: 25,
-        name: 'Floral Dress',
-        imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
-        price: 80,
+        name: '20SS Check Blazer - Grey',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/03/GM0020020352773_2_ORGINL_20200224180344895.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/03/GM0020020352773_3_ORGINL_20200224180344895.jpg',
+        price: 75.67,
       },
       {
         id: 26,
-        name: 'Red Dots Dress',
-        imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
-        price: 80,
+        name: '20SS Solid Blazer - Black',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/06/GM0020020657391_2_ORGINL_20200224180255074.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/06/GM0020020657391_3_ORGINL_20200224180255074.jpg',
+        price: 62.39,
       },
       {
         id: 27,
@@ -203,32 +251,44 @@ const SHOP_DATA = [
   },
   {
     id: 5,
-    title: 'Mens',
-    routeName: 'mens',
+    title: 'Outerwear',
+    routeName: 'outerwear',
     items: [
       {
         id: 30,
-        name: 'Camo Down Vest',
-        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
-        price: 325,
+        name: '20SS Back Artwork MA-1 Jacket - White',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/25/GM0020022573303_0_ORGINL_20200227102018614.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/25/GM0020022573303_2_ORGINL_20200227102018614.jpg',
+        price: 84.09,
       },
       {
         id: 31,
-        name: 'Floral T-shirt',
-        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
-        price: 20,
+        name: '20SS Oversized Hooded Jacket - Yellowish Brown',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/28/GM0020012845397_0_ORGINL_20200220184009806.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/28/GM0020012845397_2_ORGINL_20200220184009806.jpg',
+        price: 92.5,
       },
       {
         id: 32,
-        name: 'Black & White Longsleeve',
-        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
-        price: 25,
+        name: '20SS Out Pocket Balmacaan Coat - Khaki',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/23/GM0019122318948_0_ORGINL_20191227170628296.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/23/GM0019122318948_2_ORGINL_20191227170628296.jpg',
+        price: 100.92,
       },
       {
         id: 33,
-        name: 'Pink T-shirt',
-        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
-        price: 25,
+        name: '20SS Point Checkered Button Up Coat - Khaki',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/02/GM0020010223913_0_ORGINL_20200217112440697.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/02/GM0020010223913_2_ORGINL_20200217112440697.jpg',
+        price: 109.34,
       },
       {
         id: 34,

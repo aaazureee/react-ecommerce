@@ -12,30 +12,46 @@ type CollectionItemProps = {
 };
 
 const CollectionItem = ({ item, dispatch }: CollectionItemProps) => {
-  const { imageUrl, name, price } = item;
-  const [loading, setLoading] = useState(true);
+  const { imageUrl, imageUrl2, name, price } = item;
+  const [loading, setLoading] = useState(0);
 
+  const [hoverHelper, setHoverHelper] = useState(false);
   return (
     <div className="collection-item">
-      {loading && <div className="placeholder-image gradient" />}
-      <div className="image-holder">
+      {loading !== 2 && <div className="placeholder-image gradient" />}
+      <div className={`image-holder ${loading !== 2 ? 'image-loading' : ''}`}>
         <img
           className="image"
           src={imageUrl}
           alt="collection-item"
-          onLoad={() => setLoading(false)}
+          onLoad={() => setLoading((c) => c + 1)}
           style={{
-            display: loading ? 'none' : 'block',
+            display: loading !== 2 ? 'none' : 'block',
+          }}
+        />
+        <img
+          className={`image-2 ${hoverHelper ? 'hover-helper' : ''}`}
+          onMouseOver={() => setHoverHelper(true)}
+          onMouseOut={() => setHoverHelper(false)}
+          src={imageUrl2}
+          alt="collection-item-2"
+          onLoad={() => setLoading((c) => c + 1)}
+          style={{
+            display: loading !== 2 ? 'none' : 'block',
           }}
         />
       </div>
 
       <div className="collection-footer">
-        <span className="name">{name}</span>
-        <span className="price">${price}</span>
+        <div className="name">{name}</div>
+        <div className="price">${price.toFixed(2)}</div>
       </div>
 
-      <CustomButton inverted onClick={() => dispatch(addCartItem(item))}>
+      <CustomButton
+        onMouseOver={() => setHoverHelper(true)}
+        inverted
+        onClick={() => dispatch(addCartItem(item))}
+      >
         Add to cart
       </CustomButton>
     </div>

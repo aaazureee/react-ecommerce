@@ -15,6 +15,7 @@ export type CollectionItemData = {
   id: number;
   name: string;
   imageUrl: string;
+  imageUrl2?: string;
   price: number;
   quantity?: number;
 };
