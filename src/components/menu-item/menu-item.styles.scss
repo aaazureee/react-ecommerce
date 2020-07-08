@@ -1,17 +1,13 @@
 .menu-item {
   width: 30%;
-  height: 240px;
+  height: 500px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0.5px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
-
-  &.no-border {
-    border: none;
-  }
+  background-color: rgba(0, 0, 0, 1);
 
   &:hover {
     cursor: pointer;
@@ -22,20 +18,8 @@
     }
 
     & .content {
-      opacity: 0.9;
+      color: white;
     }
-  }
-
-  &.large {
-    height: 380px;
-  }
-
-  &:first-child {
-    margin-right: 7.5px;
-  }
-
-  &:last-child {
-    margin-left: 7.5px;
   }
 
   .placeholder-image {
@@ -49,6 +33,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    opacity: 0.85;
   }
 
   .content {
@@ -58,21 +43,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    background-color: white;
-    opacity: 0.7;
+    // border: 1px solid black;
+    // background-color: white;
+    // opacity: 0.7;
     position: absolute;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1px;
 
     .title {
       font-weight: bold;
       margin-bottom: 6px;
-      font-size: 22px;
-      color: #4a4a4a;
-    }
-
-    .subtitle {
-      font-weight: lighter;
-      font-size: 16px;
+      font-size: 28px;
+      // color: #4a4a4a;
     }
   }
 }

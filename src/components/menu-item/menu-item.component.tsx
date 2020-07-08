@@ -5,30 +5,26 @@ import './menu-item.styles.scss';
 
 type MenuItemProps = {
   title: string;
-  imageUrl: string;
-  size?: string;
-  subtitle?: string;
-  linkUrl: string;
+  thumbnail: string;
+  routeName: string;
 } & RouteComponentProps;
 
 const MenuItem = ({
   title,
-  subtitle = 'SHOP NOW',
-  imageUrl,
-  size,
-  linkUrl,
+  thumbnail,
+  routeName,
   history,
   match,
 }: MenuItemProps) => {
   const [loading, setLoading] = useState(true);
   return (
     <div
-      className={`menu-item ${size ? size : ''} ${loading ? 'no-border' : ''}`}
-      onClick={() => history.push(`${match.url}${linkUrl}`)}
+      className={`menu-item`}
+      onClick={() => history.push(`${match.url}${routeName}`)}
     >
       {loading && <div className="placeholder-image gradient" />}
       <img
-        src={imageUrl}
+        src={thumbnail}
         alt="menu-item"
         className="background-image"
         style={{
@@ -38,7 +34,7 @@ const MenuItem = ({
       />
       <div className="content">
         <div className="title">{title.toUpperCase()}</div>
-        <span className="subtitle">{subtitle}</span>
+        {/* <span className="subtitle">{subtitle}</span> */}
       </div>
     </div>
   );

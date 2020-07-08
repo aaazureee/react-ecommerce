@@ -6,6 +6,7 @@ import { toggleCartVisibility } from '../../store/cart/actions';
 import { RootState } from '../../store';
 import { CollectionItemData } from '../../pages/shop/shop.component';
 import CartItem from '../cart-item/cart-item.component';
+import { useHistory } from 'react-router-dom';
 
 interface CartDropDownProps {
   cartItems: CollectionItemData[];
@@ -13,6 +14,7 @@ interface CartDropDownProps {
 }
 
 const CartDropdown = ({ cartItems, dispatch }: CartDropDownProps) => {
+  const history = useHistory();
   return (
     <div className="cart-dropdown">
       <button
@@ -24,11 +26,22 @@ const CartDropdown = ({ cartItems, dispatch }: CartDropDownProps) => {
         &times;
       </button>
       <div className="cart-items">
-        {cartItems.map((cartItem) => (
-          <CartItem key={cartItem.id} item={cartItem} />
-        ))}
+        {cartItems.length ? (
+          cartItems.map((cartItem) => (
+            <CartItem key={cartItem.id} item={cartItem} />
+          ))
+        ) : (
+          <div className="empty-cart-msg">Your cart is empty</div>
+        )}
       </div>
-      <CustomButton>CHECKOUT</CustomButton>
+      <CustomButton
+        onClick={() => {
+          dispatch(toggleCartVisibility());
+          history.push('/checkout');
+        }}
+      >
+        CHECKOUT
+      </CustomButton>
     </div>
   );
 };

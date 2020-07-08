@@ -3,6 +3,8 @@ const SHOP_DATA = [
     id: 1,
     title: 'TㅡShirts',
     routeName: 'tshirts',
+    thumbnail:
+      'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/06/24/GM0020062488154_0_ORGINL_20200703181323271.jpg',
     items: [
       {
         id: 1,
@@ -76,6 +78,8 @@ const SHOP_DATA = [
     id: 2,
     title: 'Shirts',
     routeName: 'shirts',
+    thumbnail:
+      'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/06/24/GM0020062488157_0_ORGINL_20200703184632329.jpg',
     items: [
       {
         id: 10,
@@ -143,6 +147,8 @@ const SHOP_DATA = [
     id: 3,
     title: 'Pants / Trousers',
     routeName: 'pants-trousers',
+    thumbnail:
+      'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/06/18/GM0020061883937_0_ORGINL_20200703183634462.jpg',
     items: [
       {
         id: 18,
@@ -190,11 +196,67 @@ const SHOP_DATA = [
   },
   {
     id: 4,
-    title: 'Jackets/Vests',
-    routeName: 'jackets-vests',
+    title: 'Knitwear',
+    routeName: 'knitwear',
+    thumbnail:
+      'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/16/GM0019121613071_0_ORGINL_20200110191113990.jpg',
     items: [
       {
         id: 23,
+        name: '20SS Pocket Cropped Sleeve Open Cardigan - Black',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/25/GM0020022573304_0_ORGINL_20200312165808549.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/25/GM0020022573304_2_ORGINL_20200312165808549.jpg',
+        price: 50.42,
+      },
+      {
+        id: 24,
+        name: '20SS Print V Neck Cardigan - Ivory',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/31/GM0020013151286_0_ORGINL_20200220172506362.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/31/GM0020013151286_2_ORGINL_20200220172506362.jpg',
+        price: 42,
+      },
+      {
+        id: 25,
+        name: '20SS Pocket Jacquard V Neck Cardigan - Khaki',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/26/GM0019122620927_0_ORGINL_20200110203739340.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/26/GM0019122620927_2_ORGINL_20200110203739340.jpg',
+        price: 26.86,
+      },
+      {
+        id: 26,
+        name: '20SS Out Pocket V Neck Cardigan - Light Pink',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/31/GM0020013151282_0_ORGINL_20200207152432692.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/31/GM0020013151282_2_ORGINL_20200207152432692.jpg',
+        price: 46.74,
+      },
+      {
+        id: 27,
+        name: '20SS Boucle Button Up V Neck Cardigan - Beige',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/21/GM0020012139613_0_ORGINL_20200203172437598.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/21/GM0020012139613_2_ORGINL_20200203172437598.jpg',
+        price: 49.5,
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: 'Jackets/Vests',
+    routeName: 'jackets-vests',
+    thumbnail:
+      'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/03/17/GM0020031797560_0_ORGINL_20200327174553651.jpg',
+    items: [
+      {
+        id: 28,
         name: '20SS Seersucker Set Up Jacket - Light Grey',
         imageUrl:
           'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/03/17/GM0020031797588_0_ORGINL_20200320115027245.jpg',
@@ -203,7 +265,7 @@ const SHOP_DATA = [
         price: 67.25,
       },
       {
-        id: 24,
+        id: 29,
         name: '20SS Oversized Jacket - Ash',
         imageUrl:
           'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/10/GM0020021059762_0_ORGINL_20200303105503888.jpg',
@@ -212,7 +274,7 @@ const SHOP_DATA = [
         price: 40.33,
       },
       {
-        id: 25,
+        id: 30,
         name: '20SS Check Blazer - Grey',
         imageUrl:
           'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/03/GM0020020352773_2_ORGINL_20200224180344895.jpg',
@@ -221,7 +283,7 @@ const SHOP_DATA = [
         price: 75.67,
       },
       {
-        id: 26,
+        id: 31,
         name: '20SS Solid Blazer - Black',
         imageUrl:
           'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/06/GM0020020657391_2_ORGINL_20200224180255074.jpg',
@@ -230,19 +292,19 @@ const SHOP_DATA = [
         price: 62.39,
       },
       {
-        id: 27,
+        id: 32,
         name: 'Striped Sweater',
         imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
         price: 45,
       },
       {
-        id: 28,
+        id: 33,
         name: 'Yellow Track Suit',
         imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
         price: 135,
       },
       {
-        id: 29,
+        id: 34,
         name: 'White Blouse',
         imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
         price: 20,
@@ -250,12 +312,14 @@ const SHOP_DATA = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: 'Outerwear',
     routeName: 'outerwear',
+    thumbnail:
+      'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/04/GM0020020454229_0_ORGINL_20200312163537565.jpg',
     items: [
       {
-        id: 30,
+        id: 35,
         name: '20SS Back Artwork MA-1 Jacket - White',
         imageUrl:
           'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/02/25/GM0020022573303_0_ORGINL_20200227102018614.jpg',
@@ -264,7 +328,7 @@ const SHOP_DATA = [
         price: 84.09,
       },
       {
-        id: 31,
+        id: 36,
         name: '20SS Oversized Hooded Jacket - Yellowish Brown',
         imageUrl:
           'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/28/GM0020012845397_0_ORGINL_20200220184009806.jpg',
@@ -273,7 +337,7 @@ const SHOP_DATA = [
         price: 92.5,
       },
       {
-        id: 32,
+        id: 37,
         name: '20SS Out Pocket Balmacaan Coat - Khaki',
         imageUrl:
           'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/19/12/23/GM0019122318948_0_ORGINL_20191227170628296.jpg',
@@ -282,7 +346,7 @@ const SHOP_DATA = [
         price: 100.92,
       },
       {
-        id: 33,
+        id: 38,
         name: '20SS Point Checkered Button Up Coat - Khaki',
         imageUrl:
           'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/01/02/GM0020010223913_0_ORGINL_20200217112440697.jpg',
@@ -291,13 +355,13 @@ const SHOP_DATA = [
         price: 109.34,
       },
       {
-        id: 34,
+        id: 39,
         name: 'Jean Long Sleeve',
         imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
         price: 40,
       },
       {
-        id: 35,
+        id: 40,
         name: 'Burgundy T-shirt',
         imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
         price: 25,

@@ -8,6 +8,7 @@ export type CollectionData = {
   id: number;
   title: string;
   routeName: string;
+  thumbnail: string;
   items: CollectionItemData[];
 };
 
