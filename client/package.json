@@ -1,7 +1,8 @@
 {
-  "name": "hello-react",
+  "name": "react-ecommerce",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -13,6 +14,7 @@
     "@types/react-redux": "^7.1.9",
     "@types/react-router-dom": "^5.1.5",
     "@types/redux-logger": "^3.0.8",
+    "axios": "^0.19.2",
     "firebase": "^7.15.4",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
