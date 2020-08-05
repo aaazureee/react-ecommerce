@@ -4,6 +4,11 @@ interface GenericObject {
   [key: string]: any;
 }
 
+const test = () => {
+  let a1 = 5;
+  useState(0);
+};
+
 const useForm = <T extends GenericObject>(initialState: T) => {
   const [formState, setFormState] = useState(initialState);
 
