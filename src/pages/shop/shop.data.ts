@@ -44,33 +44,48 @@ const SHOP_DATA = [
       },
       {
         id: 5,
-        name: 'Green Beanie',
-        imageUrl: 'https://i.ibb.co/YTjW3vF/green-beanie.png',
-        price: 18,
+        name: '20FW Mini Letter Print Embroidered Half Sleeve T-Shirt - White',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/13/GM0020071306830_0_ORGINL_20200724160752594.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/13/GM0020071306830_2_ORGINL_20200724160752594.jpg',
+        price: 21.91,
       },
       {
         id: 6,
-        name: 'Palm Tree Cap',
-        imageUrl: 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
-        price: 14,
+        name: '20FW Pocket Patch Short Sleeve T-Shirt - Blue',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/24/GM0020072418587_0_ORGINL_20200727161211708.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/24/GM0020072418587_2_ORGINL_20200727161211708.jpg',
+        price: 25.29,
       },
       {
         id: 7,
-        name: 'Red Beanie',
-        imageUrl: 'https://i.ibb.co/bLB646Z/red-beanie.png',
-        price: 18,
+        name: '20FW Cotton Stripe T-Shirt - Ivory',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/15/GM0020071510017_0_ORGINL_20200724161355693.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/15/GM0020071510017_2_ORGINL_20200724161355693.jpg',
+        price: 25.29,
       },
       {
         id: 8,
-        name: 'Wolf Cap',
-        imageUrl: 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
-        price: 14,
+        name: '20FW Oversized Y Neck Half Sleeve T-Shirt - Black',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/03/GM0020070397962_0_ORGINL_20200724161729387.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/03/GM0020070397962_2_ORGINL_20200724161729387.jpg',
+        price: 21.91,
       },
       {
         id: 9,
         name: 'Blue Snapback',
-        imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
-        price: 16,
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/21/GM0020072115588_0_ORGINL_20200724165004599.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/21/GM0020072115588_2_ORGINL_20200724165004599.jpg',
+        price: 30.37,
       },
     ],
   },
@@ -119,27 +134,39 @@ const SHOP_DATA = [
       },
       {
         id: 14,
-        name: 'Nike Red High Tops',
-        imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
-        price: 160,
+        name: '20FW Pocket Oversized Half Sleeve Shirt - Navy',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/13/GM0020071306851_0_ORGINL_20200724161507024.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/13/GM0020071306851_2_ORGINL_20200724161507024.jpg',
+        price: 42.21,
       },
       {
         id: 15,
-        name: 'Nike Brown High Tops',
-        imageUrl: 'https://i.ibb.co/fMTV342/nike-brown.png',
-        price: 160,
+        name: '20FW Check Pocket Long Sleeve Shirt - Black',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/13/GM0020071306839_0_ORGINL_20200724170251330.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/13/GM0020071306839_2_ORGINL_20200724170251330.jpg',
+        price: 33.75,
       },
       {
         id: 16,
-        name: 'Air Jordan Limited',
-        imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
-        price: 190,
+        name: '20FW Basic Open Collar Long Sleeve Shirt - Ivory',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/20/GM0020072013916_0_ORGINL_20200724161605716.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/20/GM0020072013916_2_ORGINL_20200724161605716.jpg',
+        price: 33.75,
       },
       {
         id: 17,
-        name: 'Timberlands',
-        imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
-        price: 200,
+        name: '20FW Contrast Zip Jacket Like Shirt - Navy',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/16/GM0020071611102_0_ORGINL_20200721122047893.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/16/GM0020071611102_2_ORGINL_20200721122047893.jpg',
+        price: 50.67,
       },
     ],
   },
@@ -188,9 +215,12 @@ const SHOP_DATA = [
       },
       {
         id: 22,
-        name: 'Tan Trench',
-        imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
-        price: 185,
+        name: '20FW Semi Wide Single Pleated Dress Pants - Brown',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/17/GM0020071711682_0_ORGINL_20200724161705388.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/17/GM0020071711682_2_ORGINL_20200724161705388.jpg',
+        price: 33.75,
       },
     ],
   },
@@ -293,21 +323,30 @@ const SHOP_DATA = [
       },
       {
         id: 32,
-        name: 'Striped Sweater',
-        imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
-        price: 45,
+        name: '20FW Linen Blend Single Breasted Jacket - Ash',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/21/GM0020072115587_0_ORGINL_20200724164912412.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/07/21/GM0020072115587_2_ORGINL_20200724164912412.jpg',
+        price: 84.51,
       },
       {
         id: 33,
-        name: 'Yellow Track Suit',
-        imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
-        price: 135,
+        name: '20FW Houndstooth Check Jacket - Khaki',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/06/30/GM0020063093668_0_ORGINL_20200724160722802.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/06/30/GM0020063093668_2_ORGINL_20200724160722802.jpg',
+        price: 67.59,
       },
       {
         id: 34,
-        name: 'White Blouse',
-        imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
-        price: 20,
+        name: '20SS Check Single Breasted Jacket - Brown',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/19/12/23/GM0019122318943_0_ORGINL_20191227165604100.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/19/12/23/GM0019122318943_2_ORGINL_20191227165604100.jpg',
+        price: 92.97,
       },
     ],
   },
@@ -356,15 +395,21 @@ const SHOP_DATA = [
       },
       {
         id: 39,
-        name: 'Jean Long Sleeve',
-        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
-        price: 40,
+        name: '20SS Lettering Zip Up Jacket - Black',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/03/13/GM0020031394072_0_ORGINL_20200402160119495.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/20/03/13/GM0020031394072_2_ORGINL_20200402160119495.jpg',
+        price: 25.29,
       },
       {
         id: 40,
-        name: 'Burgundy T-shirt',
-        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
-        price: 25,
+        name: '20SS Scotch Detail Puffer Jacket - Navy',
+        imageUrl:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/19/12/30/GM0019123022546_0_ORGINL_20200110162334565.jpg',
+        imageUrl2:
+          'https://img.ssfshop.com/cmd/LB_500x660/Q_85/src/https://img.ssfshop.com/goods/8SBR/19/12/30/GM0019123022546_2_ORGINL_20200110162334565.jpg',
+        price: 33.75,
       },
     ],
   },

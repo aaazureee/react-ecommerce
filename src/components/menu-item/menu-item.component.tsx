@@ -9,18 +9,12 @@ type MenuItemProps = {
   routeName: string;
 } & RouteComponentProps;
 
-const MenuItem = ({
-  title,
-  thumbnail,
-  routeName,
-  history,
-  match,
-}: MenuItemProps) => {
+const MenuItem = ({ title, thumbnail, routeName, history }: MenuItemProps) => {
   const [loading, setLoading] = useState(true);
   return (
     <div
       className={`menu-item`}
-      onClick={() => history.push(`${match.url}${routeName}`)}
+      onClick={() => history.push(`/shop/${routeName}`)}
     >
       {loading && <div className="placeholder-image gradient" />}
       <img
@@ -34,7 +28,6 @@ const MenuItem = ({
       />
       <div className="content">
         <div className="title">{title.toUpperCase()}</div>
-        {/* <span className="subtitle">{subtitle}</span> */}
       </div>
     </div>
   );

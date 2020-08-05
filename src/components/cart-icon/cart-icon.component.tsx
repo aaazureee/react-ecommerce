@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { ReactComponent as ShoppingIcon } from '../../assets/shopping-bag.svg';
-import { toggleCartVisibility } from '../../store/cart/actions';
-import './cart-icon.styles.scss';
 import { RootState } from '../../store';
+import { toggleCartVisibility } from '../../store/cart/actions';
 import { cartItemsCountSelector } from '../../store/cart/selectors';
+import './cart-icon.styles.scss';
 
 interface CartIconProps {
   totalCount: number;
@@ -12,10 +12,6 @@ interface CartIconProps {
 }
 
 const CartIcon = ({ totalCount, dispatch }: CartIconProps) => {
-  useEffect(() => {
-    console.log('cart icon re-render');
-  });
-
   return (
     <div className="cart-icon" onClick={() => dispatch(toggleCartVisibility())}>
       <ShoppingIcon className="shopping-icon" />

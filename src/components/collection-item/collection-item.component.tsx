@@ -5,6 +5,7 @@ import './collection-item.styles.scss';
 import CustomButton from '../custom-button/custom-button.component';
 import { connect } from 'react-redux';
 import { addCartItem } from '../../store/cart/actions';
+import { toast } from 'react-toastify';
 
 type CollectionItemProps = {
   item: CollectionItemData;
@@ -50,7 +51,17 @@ const CollectionItem = ({ item, dispatch }: CollectionItemProps) => {
       <CustomButton
         onMouseOver={() => setHoverHelper(true)}
         inverted
-        onClick={() => dispatch(addCartItem(item))}
+        onClick={() => {
+          toast(
+            <div>
+              <span role="img" aria-label="cart">
+                🛒
+              </span>{' '}
+              {name} is added to your cart.
+            </div>
+          );
+          dispatch(addCartItem(item));
+        }}
       >
         Add to cart
       </CustomButton>
