@@ -1,5 +1,5 @@
 # react-ecommerce
-Sample ecommerce app built using Typescript React, Redux, Firebase and styling done via Sass (mobile-responsive). Support Email/Password + Google Sign-In. Add items to shopping card and checkout securely via Stripe.  
+Sample ecommerce app built using Typescript React, Redux, Firebase and styling done via Sass (mobile-responsive). Support Email/Password + Google Sign-In. Add items to shopping cart and checkout securely via Stripe.  
 
 ## Demo
 ![home](https://i.imgur.com/JWEwPTj.png)  
