@@ -1,5 +1,7 @@
+@import '../../sass/mixins';
+
 .sign-in-and-sign-up {
-  width: 850px;
+  max-width: 850px;
   display: flex;
   justify-content: space-between;
   margin: 30px auto;
@@ -7,5 +9,10 @@
   .error {
     margin-bottom: 10px;
     color: red;
+  }
+
+  @include lg {
+    flex-direction: column;
+    align-items: center;
   }
 }

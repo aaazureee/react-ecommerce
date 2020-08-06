@@ -1,6 +1,13 @@
+@import '../../sass/mixins';
+
 .collection-page {
   display: flex;
   flex-direction: column;
+
+  @include md {
+    padding: 10px;
+    margin-bottom: 0px;
+  }
 
   .title {
     font-size: 38px;
@@ -8,12 +15,18 @@
   }
 
   .items {
-    // display: flex;
-    // justify-content: space-between;
-    // flex-wrap: wrap;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    @media (max-width: 400px) {
+      grid-template-columns: 1fr;
+    }
 
     & .collection-item {
       margin-bottom: 30px;

@@ -1,3 +1,5 @@
+@import '../../sass/mixins';
+
 .sign-up {
   display: flex;
   flex-direction: column;
@@ -5,5 +7,14 @@
 
   .title {
     margin: 10px 0;
+  }
+
+  @include sm {
+    width: 100%;
+    padding: 10px;
+
+    .custom-button {
+      width: 100%;
+    }
   }
 }

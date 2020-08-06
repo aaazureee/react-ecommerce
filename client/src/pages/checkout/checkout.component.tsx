@@ -24,7 +24,7 @@ const Checkout = ({ cartItems, totalPrice }: CheckoutProps) => {
             <div className="header-block name">
               <span>Description</span>
             </div>
-            <div className="header-block">
+            <div className="header-block quantity">
               <span>Quantity</span>
             </div>
             <div className="header-block">

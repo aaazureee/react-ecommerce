@@ -1,6 +1,12 @@
+@import '../../sass/mixins';
+
 .directory-menu {
   width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include lg {
+    width: 100%;
+  }
 }

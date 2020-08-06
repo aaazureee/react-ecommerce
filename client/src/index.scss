@@ -1,3 +1,5 @@
+@import 'sass/mixins';
+
 * {
   box-sizing: border-box;
 }
@@ -9,8 +11,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media screen and (max-width: 800px) {
-    padding: 10px;
+  // @media screen and (min-width: 576px) {
+  //   padding: 10px;
+  // }
+  @include md {
+    padding: 0px;
+    padding-top: 20px;
   }
 }
 

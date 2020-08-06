@@ -1,0 +1,7 @@
+@import '../../sass/mixins';
+
+.shop-page {
+  @include md {
+    margin-bottom: 20px;
+  }
+}

@@ -1,3 +1,5 @@
+@import '../../sass/mixins';
+
 .cart-dropdown {
   position: absolute;
   width: 300px;
@@ -11,6 +13,10 @@
   top: 90px;
   right: 55px;
   z-index: 5;
+
+  @include md {
+    right: 15px;
+  }
 
   .cart-items {
     height: 240px;

@@ -5,11 +5,18 @@ import './menu-item.styles.scss';
 
 type MenuItemProps = {
   title: string;
+  title2?: string;
   thumbnail: string;
   routeName: string;
 } & RouteComponentProps;
 
-const MenuItem = ({ title, thumbnail, routeName, history }: MenuItemProps) => {
+const MenuItem = ({
+  title,
+  title2,
+  thumbnail,
+  routeName,
+  history,
+}: MenuItemProps) => {
   const [loading, setLoading] = useState(true);
   return (
     <div
@@ -28,6 +35,7 @@ const MenuItem = ({ title, thumbnail, routeName, history }: MenuItemProps) => {
       />
       <div className="content">
         <div className="title">{title.toUpperCase()}</div>
+        {title2 && <div className="title">{title2.toUpperCase()}</div>}
       </div>
     </div>
   );

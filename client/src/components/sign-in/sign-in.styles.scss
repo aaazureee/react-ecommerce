@@ -1,12 +1,31 @@
+@import '../../sass/mixins';
+
 .sign-in {
   width: 380px;
 
   .buttons {
     display: flex;
     justify-content: space-between;
-    // flex-wrap: wrap;
+
+    @include sm {
+      flex-direction: column;
+
+      button {
+        margin-top: 10px;
+      }
+    }
   }
+
   .title {
     margin: 10px 0;
+  }
+
+  @include lg {
+    margin-bottom: 30px;
+  }
+
+  @include sm {
+    width: 100%;
+    padding: 10px;
   }
 }

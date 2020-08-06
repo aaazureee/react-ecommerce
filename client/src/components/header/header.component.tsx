@@ -26,16 +26,7 @@ const Header = ({ userDisplayName, cartHidden, dispatch }: HeaderProps) => {
           className="logo"
           alt="logo"
         />
-        <div
-          style={{
-            fontSize: 20,
-            fontWeight: 'bold',
-            letterSpacing: 0.5,
-            marginLeft: 10,
-          }}
-        >
-          REACT ECOMMERCE
-        </div>
+        <div className="header-title">REACT ECOMMERCE</div>
       </Link>
       <div className="options">
         <Link className="option" to="/shop">

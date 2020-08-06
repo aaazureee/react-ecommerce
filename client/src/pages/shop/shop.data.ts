@@ -172,7 +172,8 @@ const SHOP_DATA = [
   },
   {
     id: 3,
-    title: 'Pants / Trousers',
+    title: 'Pants',
+    title2: 'Trousers',
     routeName: 'pants-trousers',
     thumbnail:
       'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/06/18/GM0020061883937_0_ORGINL_20200703183634462.jpg',
@@ -280,7 +281,8 @@ const SHOP_DATA = [
   },
   {
     id: 5,
-    title: 'Jackets/Vests',
+    title: 'Jackets',
+    title2: 'Vests',
     routeName: 'jackets-vests',
     thumbnail:
       'https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/8SBR/20/03/17/GM0020031797560_0_ORGINL_20200327174553651.jpg',

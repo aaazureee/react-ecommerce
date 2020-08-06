@@ -1,13 +1,15 @@
+@import '../../sass/mixins';
+
 .checkout-page {
   width: 70%;
-  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px auto 0;
+  margin: 30px auto 0;
 
-  @media screen and (max-width: 800px) {
+  @include lg {
     width: 100%;
+    padding: 10px;
   }
 
   .checkout-header {
@@ -31,6 +33,17 @@
 
       &:last-child {
         width: 8%;
+
+        @include sm {
+          display: none;
+          width: 0%;
+        }
+      }
+
+      @include sm {
+        &.quantity {
+          width: 26%;
+        }
       }
     }
   }
