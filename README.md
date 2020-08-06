@@ -1,5 +1,5 @@
 # react-ecommerce
-Sample ecommerce app built using React and Redux. Support Email/Password + Google Sign-In, checkout securely via Stripe.
+Sample ecommerce app built using React, Redux, Sass (mobile-responsive). Support Email/Password + Google Sign-In, checkout securely via Stripe.
 
 ## Demo
 ![home](https://i.imgur.com/JWEwPTj.png)  
